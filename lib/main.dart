@@ -6,12 +6,10 @@ void main() {
     home: Scaffold(
         body: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromRGBO(54, 8, 134, 1),
-                  Color.fromRGBO(107, 8, 255, 16),
-                ],
-              ),
+              gradient: LinearGradient(colors: [
+                Color.fromARGB(255, 69, 37, 124),
+                Color.fromARGB(255, 63, 30, 154)
+              ], begin: Alignment.topLeft, end: Alignment.bottomRight),
             ),
             child: const StartScreen())),
     debugShowCheckedModeBanner: false,
