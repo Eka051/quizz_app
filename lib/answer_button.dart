@@ -9,9 +9,8 @@ class AnswerButton extends StatelessWidget {
 
   @override
   Widget build(context) {
-    // TODO: implement build
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onClick,
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
         shape: RoundedRectangleBorder(
@@ -20,7 +19,10 @@ class AnswerButton extends StatelessWidget {
         foregroundColor: Colors.white,
         backgroundColor: Colors.indigo,
       ),
-      child: Text(answerText),
+      child: Text(
+        answerText,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }

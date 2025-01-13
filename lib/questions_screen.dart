@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:quizz_app/answer_button.dart';
 import 'package:quizz_app/data/questions.dart';
@@ -15,13 +17,15 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   var currentQuestionIndex = 0;
 
   void answerQuestion() {
-    setState(() {
-      if (currentQuestionIndex < questions.length - 1) {
-        currentQuestionIndex += 1;
-      } else {
-        currentQuestionIndex += 0;
-      }
-    });
+    if (currentQuestionIndex < questions.length - 1) {
+      setState(() {
+        currentQuestionIndex++;
+      });
+    } else {
+      setState(() {
+        currentQuestionIndex = 0;
+      });
+    }
   }
 
   @override
