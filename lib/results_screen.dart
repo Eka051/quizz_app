@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:quizz_app/data/questions.dart';
+import 'package:quizz_app/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.choosenAnswers});
@@ -13,11 +15,12 @@ class ResultsScreen extends StatelessWidget {
         {
           'question_index': i,
           'question': questions[i].text,
-          'answer': questions[i].answers[0],
+          'correct_answer': questions[i].answers[0],
           'user_answer': choosenAnswers[i],
         },
       );
     }
+
     return summary;
   }
 
@@ -37,9 +40,17 @@ class ResultsScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center),
             SizedBox(height: 30),
-            Text('question'),
+            QuestionsSummary(getSummaryData()),
             SizedBox(height: 30),
-            TextButton(onPressed: () {}, child: Text('Restart Quiz'))
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Restart Quiz',
+                  style: GoogleFonts.lato(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ))
           ],
         ),
       ),
