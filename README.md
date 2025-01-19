@@ -1,6 +1,6 @@
 # quizz_app
 
-A new Flutter project.
+simple quizz app built with flutter, including a summary of answer at the end
 
 ## Getting Started
 
