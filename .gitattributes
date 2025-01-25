@@ -1,7 +1,25 @@
-android/** linguist-detectable=false
-ios/** linguist-detectable=false
-build/** linguist-detectable=false
-*.cpp linguist-detectable=false
-*.h linguist-detectable=false
-*.cmake linguist-detectable=false
-*.dart linguist-detectable=true
+# Include Dart files for language stats
+*.dart linguist-language=Dart
+
+# Exclude platform-specific files
+windows/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+web/** linguist-vendored
+test/** linguist-vendored
+
+# Exclude build tools and config files
+*.html linguist-vendored
+*.xml linguist-vendored
+*.gradle linguist-vendored
+*.properties linguist-vendored
+*.json linguist-vendored
+*.cmake linguist-vendored
+*.so linguist-vendored
+*.c linguist-vendored
+*.cc linguist-vendored
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.hpp linguist-vendored
+*.sh linguist-vendored
+*.bat linguist-vendored
